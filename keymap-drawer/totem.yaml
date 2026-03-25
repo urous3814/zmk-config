@@ -11,17 +11,17 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: Gui}
+  - {t: A, h: Ctrl}
   - {t: S, h: Alt}
   - {t: D, h: Shift}
-  - {t: F, h: Ctrl}
+  - {t: F, h: LEFT GUI}
   - G
   - H
-  - {t: J, h: Ctrl}
+  - {t: J, h: RCMD}
   - {t: K, h: Shift}
   - {t: L, h: Alt}
-  - {t: '''', h: Gui}
-  - Shift
+  - {t: '''', h: Ctrl}
+  - Esc
   - Z
   - X
   - C
@@ -34,11 +34,11 @@ layers:
   - /
   - Shift
   - Esc
-  - {t: SPC, h: NAV}
+  - {t: Spc, h: NAV}
   - {t: Tab, h: SYS}
   - {t: Enter, h: SYM}
   - {t: Bspc, h: NUM}
-  - Del
+  - F16
   NUM:
   - '['
   - '7'
