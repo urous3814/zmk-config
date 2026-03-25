@@ -419,7 +419,7 @@
             display-name = "DEF";
             bindings = <
                 &kp Q            &kp W            &kp E            &kp R            &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P
-                &aml LGUI A      &aml LALT S      &asl LSHFT D     &aml LCTRL F     &kp G            &kp H            &amr LCTRL J     &asr LSHFT K     &amr LALT L      &amr LGUI SQT
+                &aml LGUI A      &aml LALT S      &asl LSHFT D     &aml LCTRL F     &kp G            &kp H            &amr RCTRL J     &asr RSHFT K     &amr RALT L      &amr RGUI SQT
                 &kp LSHFT        &kp Z            &kp X            &kp C            &kp V            &kp B            &kp N            &kp M            &mt RSHFT COMMA  &mt RALT DOT     &kp SLASH        &kp RSHFT
                                                 &kp ESC          &nav_ht 0 SPC    &sys_ht 0 TAB    &lt 2 RET         &num_ht 0 BSPC   &kp DEL
             >;
@@ -430,7 +430,7 @@
             bindings = <
                 &kp LBKT         &kp N7           &kp N8           &kp N9           &kp RBKT         &none            &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &msc SCRL_UP
                 &kp SEMI         &kp N4           &kp N5           &kp N6           &kp EQUAL        &none            &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN
-                &kp LSHFT        &kp GRAVE        &kp N1           &kp N2           &kp N3           &kp BSLH         &none            &kp LCTRL        &kp LSHFT        &kp LALT         &kp LGUI         &kp RSHFT
+                &kp LSHFT        &kp GRAVE        &kp N1           &kp N2           &kp N3           &kp BSLH         &none            &kp RCTRL        &kp RSHFT        &kp RALT         &kp RGUI         &kp RSHFT
                                                 &kp DOT          &kp N0           &kp MINUS        &trans           &trans           &trans
             >;
         };
