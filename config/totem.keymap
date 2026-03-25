@@ -455,7 +455,7 @@
                 &kp Q         &kp W        &kp E        &kp R              &kp T            &kp Y      &kp U                &kp I            &kp O         &kp P
                 &aml LCTRL A  &aml LALT S  &asl LCMD D  &aml LEFT_SHIFT F  &kp G            &kp H      &amr RIGHT_SHIFT J   &asr LCMD K      &amr RALT L   &amr RCTRL SQT
 &kp LEFT_SHIFT  &kp Z         &kp X        &kp C        &kp V              &kp B            &kp N      &kp M                &mt RSHFT COMMA  &mt RALT DOT  &kp SLASH       &kp RSHFT
-                                           &kp ESC      &nav_ht 0 SPACE    &sys_ht 0 TAB    &lt 2 RET  &num_ht 0 BACKSPACE  &lt 5 F16
+                                           &kp ESC      &nav_ht 0 SPACE    &sys_ht 0 TAB    &lt 2 RET  &num_ht 0 BACKSPACE  &mou_ht 5 F16
             >;
         };
 

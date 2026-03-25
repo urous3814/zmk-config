@@ -233,7 +233,7 @@ layers:
   - Left Click
   - '&mkp MB1'
   - '&mkp MB2'
-  - {type: held}
+  - {type: trans}
 combos:
 - p: [0, 1]
   k: Esc
