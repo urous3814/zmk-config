@@ -1,0 +1,28 @@
+name: Draw ZMK keymaps
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/draw-keymaps.yml"
+      - "config/*.keymap"
+      - "config/includes/*.dtsi"
+      - "config/keypos_def/*.h"
+      - "keymap-drawer/config.yaml"
+      - "keymap-drawer/*.json"
+  schedule:
+    - cron: "0 4 * * 1"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+      amend_commit: true
+      fail_on_error: true
+      keymap_patterns: "config/*.keymap"
+      config_path: "keymap-drawer/config.yaml"
+      json_path: "keymap-drawer"
+      output_folder: "keymap-drawer"
+      destination: "both"

@@ -1,0 +1,166 @@
+#include <behaviors.dtsi>
+
+#define QUICK_TAP_MS 175
+#define REQUIRE_PRIOR_IDLE_MS 190
+
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <150>;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+};
+
+/ {
+    behaviors {
+        // Home-row mods gated by opposite-hand keys and thumbs.
+        aml: alpha_mods_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        asl: alpha_shift_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        amr: alpha_mods_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        asr: alpha_shift_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <THUMBS>;
+        };
+
+        // Tap: &kp, hold: &mo layer, shifted hold: &to layer.
+        morph_num0: morph_num0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo NUM>, <&to NUM>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        num_ht: num_layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&morph_num0>, <&kp>;
+        };
+
+#define NUM_BSPC &num_ht 0 BSPC
+
+        morph_nav0: morph_nav0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo NAV>, <&to NAV>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        nav_ht: nav_layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&morph_nav0>, <&kp>;
+        };
+
+#define NAV_SPC &nav_ht 0 SPC
+
+        morph_sys0: morph_sys0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo SYS>, <&to SYS>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        sys_ht: sys_layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&morph_sys0>, <&kp>;
+        };
+
+#define SYS_TAB &sys_ht 0 TAB
+
+        // Smart toggles for task and window switching.
+        sw_a: swapper_alttab {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LALT>, <&kp TAB>;
+            ignored-key-positions = <THUMBS LT4 LT2 RM1 RM2 RM3 RT2>;
+        };
+
+        sw_c: swapper_ctrltab {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp TAB>;
+            ignored-key-positions = <THUMBS LT4 LT2 RM1 RM2 RM3 RT2>;
+        };
+
+        sw_g: swapper_guitab {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp TAB>;
+            ignored-key-positions = <THUMBS LT4 LT2 RM1 RM2 RM3 RT2>;
+        };
+
+        // Tap for bootloader, hold for full reset.
+        rst_boot: rst_boot {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+            flavor = "tap-preferred";
+            bindings = <&bootloader>, <&sys_reset>;
+        };
+    };
+};

@@ -1,6 +1,11 @@
+---
 include:
   - board: xiao_ble//zmk
     shield: totem_left
+    artifact-name: totem_left
   - board: xiao_ble//zmk
     shield: totem_right
-# there is no settingsreset (needed) for the XIAO
+    artifact-name: totem_right
+  - board: xiao_ble//zmk
+    shield: settings_reset
+    artifact-name: settings_reset

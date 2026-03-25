@@ -1,5 +1,25 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build ZMK firmware
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/build.yml"
+      - "build.yaml"
+      - "config/*.conf"
+      - "config/*.keymap"
+      - "config/includes/*.dtsi"
+      - "config/keypos_def/*.h"
+      - "config/west.yml"
+  pull_request:
+    paths:
+      - ".github/workflows/build.yml"
+      - "build.yaml"
+      - "config/*.conf"
+      - "config/*.keymap"
+      - "config/includes/*.dtsi"
+      - "config/keypos_def/*.h"
+      - "config/west.yml"
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3

@@ -1,0 +1,290 @@
+layout: {zmk_keyboard: totem}
+layers:
+  DEF:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: Gui}
+  - {t: S, h: Alt}
+  - {t: D, h: Shift}
+  - {t: F, h: Ctrl}
+  - G
+  - H
+  - {t: J, h: Ctrl}
+  - {t: K, h: Shift}
+  - {t: L, h: Alt}
+  - {t: '''', h: Gui}
+  - Shift
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', h: Shift}
+  - {t: ., h: Alt}
+  - /
+  - Shift
+  - Esc
+  - {t: SPC, h: NAV}
+  - {t: Tab, h: SYS}
+  - {t: Enter, h: SYM}
+  - {t: Bspc, h: NUM}
+  - Del
+  NUM:
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
+  - ''
+  - Left Click
+  - Mouse Up
+  - Right Click
+  - Scroll Up
+  - ;
+  - '4'
+  - '5'
+  - '6'
+  - '='
+  - ''
+  - Mouse Left
+  - Mouse Down
+  - Mouse Right
+  - Scroll Down
+  - Shift
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - ''
+  - Ctrl
+  - Shift
+  - Alt
+  - Gui
+  - Shift
+  - .
+  - '0'
+  - '-'
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  SYM:
+  - '{'
+  - '&'
+  - '*'
+  - (
+  - '}'
+  - PSCRN
+  - F7
+  - F8
+  - F9
+  - F12
+  - {t: ':', h: Gui}
+  - {t: $, h: Alt}
+  - {t: '%', h: Shift}
+  - {t: ^, h: Ctrl}
+  - +
+  - SLCK
+  - F4
+  - F5
+  - F6
+  - F11
+  - Shift
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - PAUSE BREAK
+  - F1
+  - F2
+  - F3
+  - F10
+  - Shift
+  - (
+  - )
+  - _
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  NAV:
+  - Shift Tab
+  - Tab Next
+  - Shift Tab
+  - Win Next
+  - {t: Tab Close, h: Win Close}
+  - Ins
+  - {t: Bspc, h: Wrd Bspc}
+  - {t: Up, h: Doc Start}
+  - {t: Del, h: Wrd Del}
+  - PgUp
+  - Gui
+  - Alt
+  - Shift
+  - Ctrl
+  - ''
+  - CAPS
+  - {t: Left, h: Home}
+  - {t: Down, h: Doc End}
+  - {t: Right, h: End}
+  - PgDn
+  - Shift
+  - Undo
+  - Cut
+  - Copy
+  - Paste
+  - Redo
+  - Del
+  - Prev
+  - Next
+  - Vol-
+  - Vol+
+  - Shift
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - Enter
+  - Bspc
+  - Del
+  SYS:
+  - Reset Boot
+  - ''
+  - ''
+  - Lock
+  - Bat Save
+  - Bat Save
+  - KP 7
+  - KP 8
+  - KP 9
+  - Reset Boot
+  - Gui
+  - Alt
+  - Shift
+  - Ctrl
+  - ''
+  - ''
+  - KP 4
+  - KP 5
+  - KP 6
+  - ''
+  - Shift
+  - BT CLR ALL
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT CLR
+  - ''
+  - KP 1
+  - KP 2
+  - KP 3
+  - ''
+  - Shift
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - ''
+  - KP 0
+  - {type: trans}
+combos:
+- p: [0, 1]
+  k: Esc
+  l: [DEF]
+- p: [12, 13]
+  k: (
+  l: [DEF]
+- p: [16, 17]
+  k: )
+  l: [DEF]
+- p: [11, 12]
+  k: '['
+  l: [DEF]
+- p: [17, 18]
+  k: ']'
+  l: [DEF]
+- p: [11, 12]
+  k: All
+  l: [NAV]
+- p: [12, 13]
+  k: '&key_repeat'
+  l: [NAV]
+- p: [27, 28]
+  k: ;
+  l: [DEF]
+- p: [28, 29]
+  k: ':'
+  l: [DEF]
+- p: [29, 30]
+  k: Mute
+  l: [NAV]
+- p: [27, 28]
+  k: Play
+  l: [NAV]
+- p: [13, 16]
+  k: Caps Word
+  l: [DEF]
+- p: [14, 15]
+  k: Studio Unlock
+  l: [SYS]
+- p: [13, 16]
+  k: {t: DEF, h: toggle}
+  l: [NUM, NAV, SYS]
+- p: [12, 13]
+  k: +
+  l: [NUM]
+- p: [2, 3]
+  k: '-'
+  l: [NUM]
+- p: [2, 13]
+  k: '*'
+  l: [NUM]
+  a: top
+- p: [12, 3]
+  k: /
+  l: [NUM]
+- p: [23, 24]
+  k: ','
+  l: [NUM]
+- p: [22, 23]
+  k: .
+  l: [NUM]
+- p: [11, 12]
+  k: Enter
+  l: [NUM]
+- p: [1, 2]
+  k: Tab
+  l: [NUM]
+- p: [16, 17]
+  k: KP+
+  l: [SYS]
+- p: [6, 7]
+  k: KP-
+  l: [SYS]
+- p: [6, 17]
+  k: KP*
+  l: [SYS]
+  a: top
+- p: [16, 7]
+  k: KP/
+  l: [SYS]
+- p: [27, 28]
+  k: ','
+  l: [SYS]
+- p: [28, 29]
+  k: KP.
+  l: [SYS]
+- p: [17, 18]
+  k: Enter
+  l: [SYS]
+- p: [7, 8]
+  k: Tab
+  l: [SYS]

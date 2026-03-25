@@ -1,0 +1,194 @@
+parse_config:
+  zmk_additional_includes:
+    - "modules/zmk/helpers/include"
+
+  zmk_preamble: |
+    #include <zmk-helpers/key-labels/34.h>
+    #define CONFIG_WIRELESS
+
+  raw_binding_map:
+    "&sys_reset": Reset
+    "&bootloader": Boot
+    "&caps_word": Caps Word
+    "&rst_boot": Reset Boot
+
+    "&bt BT_SEL 0": BT 1
+    "&bt BT_SEL 1": BT 2
+    "&bt BT_SEL 2": BT 3
+    "&bt BT_SEL 3": BT 4
+
+    "&kp LC(C)": Copy
+    "&kp LC(X)": Cut
+    "&kp LC(V)": Paste
+    "&kp LC(Z)": Undo
+    "&kp LC(Y)": Redo
+    "&kp LC(A)": All
+
+    "&kp LG(C)": Copy
+    "&kp LG(X)": Cut
+    "&kp LG(V)": Paste
+    "&kp LG(Z)": Undo
+    "&kp LG(LS(Z))": Redo
+    "&kp LG(A)": All
+
+    "&kp LS(TAB)": Shift Tab
+    "&kp LA(F4)": Win Close
+    "&kp LC(F4)": Tab Close
+    "&kp LG(Q)": Win Close
+    "&kp LG(W)": Tab Close
+
+    "&sw_c": Tab Next
+    "&sw_a": Win Next
+    "&sw_g": Win Next
+
+    "&mmv MOVE_UP": Mouse Up
+    "&mmv MOVE_DOWN": Mouse Down
+    "&mmv MOVE_LEFT": Mouse Left
+    "&mmv MOVE_RIGHT": Mouse Right
+
+    "&msc SCRL_UP": Scroll Up
+    "&msc SCRL_DOWN": Scroll Down
+    "&msc SCRL_LEFT": Scroll Left
+    "&msc SCRL_RIGHT": Scroll Right
+
+    "&mkp LCLK": Left Click
+    "&mkp RCLK": Right Click
+    "&mkp MCLK": Middle Click
+    "&mkp MB4": Back Click
+    "&mkp MB5": Forward Click
+
+    "&kp LC(DEL)": Wrd Del
+    "&kp LA(DEL)": Wrd Del
+    "&kp LC(BSPC)": Wrd Bspc
+    "&kp LA(BSPC)": Wrd Bspc
+    "&kp LG(LEFT)": Home
+    "&kp LG(RIGHT)": End
+    "&kp LC(HOME)": Doc Start
+    "&kp LC(END)": Doc End
+    "&kp LG(UP)": Doc Start
+    "&kp LG(DOWN)": Doc End
+
+    "&kp LG(L)": Lock
+    "&kp LC(LG(Q))": Lock
+    "&sleep": Sleep
+    "&soft_off": Bat Save
+    "&studio_unlock": Studio Unlock
+    "&ind_con": Conn Status
+    "&ind_bat": Batt Level
+
+    "&kp KP_PLUS": KP+
+    "&kp KP_MINUS": KP-
+    "&kp KP_MULTIPLY": KP*
+    "&kp KP_DIVIDE": KP/
+    "&kp KP_DOT": KP.
+
+  trans_legend: { "t": "", "type": "trans" }
+
+  zmk_combos:
+    combo_star: { align: top }
+    combo_star_n: { align: top }
+
+  zmk_keycode_map:
+    LALT: Alt
+    RALT: Alt
+    LCTRL: Ctrl
+    RCTRL: Ctrl
+    LGUI: Gui
+    RGUI: Gui
+    LSHFT: Shift
+    RSHFT: Shift
+
+    BSPC: Bspc
+    DEL: Del
+    ESC: Esc
+    RET: Enter
+    SPACE: Spc
+    TAB: Tab
+
+    PG_UP: PgUp
+    PG_DN: PgDn
+    INS: Ins
+    HOME: Home
+    END: End
+
+    UP: Up
+    DOWN: Down
+    LEFT: Left
+    RIGHT: Right
+
+    C_MUTE: Mute
+    C_PP: Play
+    C_VOL_UP: Vol+
+    C_VOL_DN: Vol-
+    C_NEXT: Next
+    C_PREV: Prev
+
+    AMPERSAND: "&"
+    AMPS: "&"
+    APOS: "'"
+    APOSTROPHE: "'"
+    ASTERISK: "*"
+    ASTRK: "*"
+    AT: "@"
+    AT_SIGN: "@"
+    BACKSLASH: \
+    BSLH: \
+    CARET: ^
+    COLON: ":"
+    COMMA: ","
+    DLLR: $
+    DOLLAR: $
+    DOT: .
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    EQUAL: "="
+    EXCL: "!"
+    EXCLAMATION: "!"
+    FSLH: /
+    GRAVE: "`"
+    GREATER_THAN: ">"
+    GT: ">"
+    HASH: "#"
+    LBKT: "["
+    LBRC: "{"
+    LEFT_BRACE: "{"
+    LEFT_BRACKET: "["
+    LEFT_PARENTHESIS: "("
+    LESS_THAN: "<"
+    LPAR: "("
+    LT: "<"
+    MINUS: "-"
+    NON_US_BACKSLASH: \
+    NON_US_BSLH: "|"
+    NON_US_HASH: "#"
+    NUHS: "#"
+    PERCENT: "%"
+    PERIOD: .
+    PIPE: "|"
+    PIPE2: "|"
+    PLUS: +
+    POUND: "#"
+    PRCNT: "%"
+    QMARK: "?"
+    QUESTION: "?"
+    RBKT: "]"
+    RBRC: "}"
+    RIGHT_BRACE: "}"
+    RIGHT_BRACKET: "]"
+    RIGHT_PARENTHESIS: ")"
+    RPAR: ")"
+    SEMI: ;
+    SEMICOLON: ;
+    SINGLE_QUOTE: "'"
+    SLASH: /
+    SQT: "'"
+    STAR: "*"
+    TILDE: "~"
+    TILDE2: "~"
+    UNDER: _
+    UNDERSCORE: _
+
+draw_config:
+  append_colon_to_layer_header: false
+  dark_mode: auto
+  footer_text: "void0x00/zmk-config"

@@ -1,0 +1,68 @@
+/* KEY POSITIONS (using keypos_def helpers)
+    +---------------------+---------------------+
+    | LT4 LT3 LT2 LT1 LT0 | RT0 RT1 RT2 RT3 RT4 |
++---+ LM4 LM3 LM2 LM1 LM0 | RM0 RM1 RM2 RM3 RM4 +---+
+| LB5 LB4 LB3 LB2 LB1 LB0 | RB0 RB1 RB2 RB3 RB4 RB5 |
++-----------+ LH2 LH1 LH0 | RH0 RH1 RH2 +-----------+
+            +-------------+-------------+
+ */
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+    combo_##NAME {                                                  \
+        timeout-ms = <TERM>;                                        \
+        bindings = <BINDINGS>;                                      \
+        key-positions = <KEYPOS>;                                   \
+        layers = <LAYERS>;                                          \
+        require-prior-idle-ms = <QUICKTAP>;                         \
+        __VA_ARGS__                                                 \
+    };
+
+#define CB_TRM_FST 40
+#define CB_TRM_SLW 80
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // Top row.
+        COMBO(esc,      &kp ESC,         LT4 LT3,        DEF,                 80, 100)
+
+        // Middle row.
+        COMBO(lpar,     &kp LPAR,        LM2 LM1,        DEF,                 40, 100)
+        COMBO(rpar,     &kp RPAR,        RM1 RM2,        DEF,                 40, 100)
+        COMBO(lbkt,     &kp LBKT,        LM3 LM2,        DEF,                 80, 100)
+        COMBO(rbkt,     &kp RBKT,        RM2 RM3,        DEF,                 80, 100)
+        COMBO(sel_all,  &kp C_ALL,       LM3 LM2,                NAV,         80, 100)
+        COMBO(key_re,   &key_repeat,     LM2 LM1,                NAV,         40, 100)
+
+        // Bottom row.
+        COMBO(semi,     &kp SEMI,        RB1 RB2,        DEF,                 40, 100)
+        COMBO(colon,    &kp COLON,       RB2 RB3,        DEF,                 80, 100)
+        COMBO(mute,     &kp C_MUTE,      RB3 RB4,                NAV,         40, 200)
+        COMBO(plpu,     &kp C_PP,        RB1 RB2,                NAV,         80, 200)
+
+        // Cross-hand.
+        COMBO(capswd,   &caps_word,      LM1 RM1,        DEF,                 80, 200)
+        COMBO(stdio,    &studio_unlock,  LM0 RM0,                    SYS,     80, 500)
+        COMBO(def,      &to DEF,         LM1 RM1,            NUM NAV SYS,     80, 200)
+
+        // Calculator-like number layer combos.
+        COMBO(plus,     &kp PLUS,        LM2 LM1,            NUM,             40, 100)
+        COMBO(minus,    &kp MINUS,       LT2 LT1,            NUM,             40, 100)
+        COMBO(star,     &kp STAR,        LT2 LM1,            NUM,             80, 100)
+        COMBO(slash,    &kp SLASH,       LM2 LT1,            NUM,             80, 100)
+        COMBO(comma,    &kp COMMA,       LB2 LB1,            NUM,             40, 100)
+        COMBO(dot,      &kp DOT,         LB3 LB2,            NUM,             80, 100)
+        COMBO(ret,      &kp RET,         LM3 LM2,            NUM,             80, 100)
+        COMBO(tab,      &kp TAB,         LT3 LT2,            NUM,             40, 100)
+
+        COMBO(plus_n,   &kp KP_PLUS,     RM1 RM2,                    SYS,     40, 100)
+        COMBO(minus_n,  &kp KP_MINUS,    RT1 RT2,                    SYS,     40, 100)
+        COMBO(star_n,   &kp KP_MULTIPLY, RT1 RM2,                    SYS,     80, 100)
+        COMBO(slash_n,  &kp KP_DIVIDE,   RM1 RT2,                    SYS,     80, 100)
+        COMBO(comma_n,  &kp COMMA,       RB1 RB2,                    SYS,     40, 100)
+        COMBO(dot_n,    &kp KP_DOT,      RB2 RB3,                    SYS,     80, 100)
+        COMBO(ret_n,    &kp RET,         RM2 RM3,                    SYS,     80, 100)
+        COMBO(tab_n,    &kp TAB,         RT2 RT3,                    SYS,     40, 100)
+    };
+};

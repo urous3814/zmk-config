@@ -1,0 +1,79 @@
+#ifdef I_PAD
+    // Home-row mods.
+#define M_IDX LCTRL
+#define M_MDL LSHFT
+#define M_RNG LALT
+#define M_PNK LGUI
+
+    // Extra row keys on Totem.
+#define L_EXP LSHFT
+#define R_EXP RSHFT
+
+    // Clipboard shortcuts.
+#define C_RDO LG(LS(Z))
+#define C_PST LG(V)
+#define C_CPY LG(C)
+#define C_CUT LG(X)
+#define C_UND LG(Z)
+#define C_ALL LG(A)
+
+    // Desktop and tab navigation shortcuts.
+#define W_CLS LG(Q)
+#define T_CLS LG(W)
+#define T_RHT sw_c
+#define W_RHT sw_g
+
+#define CH_DEL LC(D)
+#define WD_DEL LA(DEL)
+#define CH_BSPC BSPC
+#define WD_BSPC LA(BSPC)
+#define WD_STR LA(LEFT)
+#define WD_END LA(RIGHT)
+#define LN_STR LG(LEFT)
+#define LN_END LG(RIGHT)
+#define ST_DOC LG(UP)
+#define EN_DOC LG(DOWN)
+
+    // System.
+#define LOCK LC(LG(Q))
+#define LANG LC(SPC)
+#else
+    // Home-row mods.
+#define M_IDX LCTRL
+#define M_MDL LSHFT
+#define M_RNG LALT
+#define M_PNK LGUI
+
+    // Extra row keys on Totem.
+#define L_EXP LSHFT
+#define R_EXP RSHFT
+
+    // Clipboard shortcuts.
+#define C_RDO LC(Y)
+#define C_PST LC(V)
+#define C_CPY LC(C)
+#define C_CUT LC(X)
+#define C_UND LC(Z)
+#define C_ALL LC(A)
+
+    // Desktop and tab navigation shortcuts.
+#define W_CLS LA(F4)
+#define T_CLS LC(F4)
+#define T_RHT sw_c
+#define W_RHT sw_a
+
+#define CH_DEL DEL
+#define WD_DEL LC(DEL)
+#define CH_BSPC BSPC
+#define WD_BSPC LC(BSPC)
+#define WD_STR LC(LEFT)
+#define WD_END LC(RIGHT)
+#define LN_STR HOME
+#define LN_END END
+#define ST_DOC LC(HOME)
+#define EN_DOC LC(END)
+
+    // System.
+#define LOCK LG(L)
+#define LANG RALT
+#endif
