@@ -13,12 +13,12 @@ layers:
   - P
   - {t: A, h: Ctrl}
   - {t: S, h: Alt}
-  - {t: D, h: Shift}
-  - {t: F, h: LEFT GUI}
+  - {t: D, h: LCMD}
+  - {t: F, h: LEFT SHIFT}
   - G
   - H
-  - {t: J, h: RCMD}
-  - {t: K, h: Shift}
+  - {t: J, h: RIGHT SHIFT}
+  - {t: K, h: LCMD}
   - {t: L, h: Alt}
   - {t: '''', h: Ctrl}
   - LEFT SHIFT
@@ -38,7 +38,7 @@ layers:
   - {t: Tab, h: SYS}
   - {t: Enter, h: SYM}
   - {t: BACKSPACE, h: NUM}
-  - DELETE
+  - F16
   NUM:
   - '['
   - '7'
@@ -67,8 +67,8 @@ layers:
   - '3'
   - \
   - ''
-  - RIGHT GUI
-  - Shift
+  - LEFT SHIFT
+  - LCMD
   - Alt
   - Ctrl
   - Shift
@@ -91,8 +91,8 @@ layers:
   - F12
   - {t: ':', h: Ctrl}
   - {t: $, h: Alt}
-  - {t: '%', h: Shift}
-  - {t: ^, h: LEFT GUI}
+  - {t: '%', h: LCMD}
+  - {t: ^, h: LEFT SHIFT}
   - +
   - SLCK
   - F4
@@ -130,8 +130,8 @@ layers:
   - PgUp
   - Ctrl
   - Alt
-  - Shift
-  - LEFT GUI
+  - LCMD
+  - LEFT SHIFT
   - ''
   - CAPS
   - {t: Left, h: Home}
@@ -169,8 +169,8 @@ layers:
   - Reset Boot
   - Ctrl
   - Alt
-  - Shift
-  - LEFT GUI
+  - LCMD
+  - LEFT SHIFT
   - ''
   - ''
   - KP 4
@@ -205,7 +205,7 @@ combos:
 - p: [16, 17]
   k: )
   l: [DEF]
-- p: [11, 12]
+- p: [12, 11]
   k: '['
   l: [DEF]
 - p: [17, 18]
