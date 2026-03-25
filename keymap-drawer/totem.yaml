@@ -38,7 +38,7 @@ layers:
   - {t: Tab, h: SYS}
   - {t: Enter, h: SYM}
   - {t: BACKSPACE, h: NUM}
-  - F16
+  - {t: F16, h: MOUSE}
   NUM:
   - '['
   - '7'
@@ -195,6 +195,45 @@ layers:
   - ''
   - KP 0
   - {type: trans}
+  MOUSE:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Scroll Up
+  - {type: trans}
+  - {type: trans}
+  - Scroll Up
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Mouse Left
+  - Mouse Up
+  - Mouse Right
+  - {type: trans}
+  - {type: trans}
+  - Mouse Left
+  - Mouse Up
+  - Mouse Right
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Mouse Down
+  - Scroll Down
+  - {type: trans}
+  - {type: trans}
+  - Scroll Down
+  - Mouse Down
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - LCMD
+  - Left Click
+  - '&mkp MB1'
+  - '&mkp MB2'
+  - {type: held}
 combos:
 - p: [0, 1]
   k: Esc
@@ -237,7 +276,7 @@ combos:
   l: [SYS]
 - p: [13, 16]
   k: {t: DEF, h: toggle}
-  l: [NUM, NAV, SYS]
+  l: [NUM, NAV, SYS, MOUSE]
 - p: [12, 13]
   k: +
   l: [NUM]
@@ -288,3 +327,9 @@ combos:
 - p: [7, 8]
   k: Tab
   l: [SYS]
+- p: [16, 17, 18]
+  k: {t: MOUSE, h: toggle}
+  l: [DEF, MOUSE]
+- p: [11, 12, 13]
+  k: {t: MOUSE, h: toggle}
+  l: [DEF, MOUSE]
