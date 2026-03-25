@@ -175,6 +175,15 @@
             flavor = "tap-preferred";
             bindings = <&bootloader>, <&sys_reset>;
         };
+
+        mou_ht: mouse_layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&tog>, <&kp>;
+        };
     };
 
     combos {
