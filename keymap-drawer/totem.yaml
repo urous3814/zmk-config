@@ -198,33 +198,33 @@ layers:
   MOUSE:
   - {type: trans}
   - {type: trans}
-  - {type: trans}
+  - Mouse Up
   - Scroll Up
   - {type: trans}
   - {type: trans}
   - Scroll Up
-  - {type: trans}
+  - Mouse Up
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - Mouse Left
-  - Mouse Up
+  - Mouse Down
   - Mouse Right
   - {type: trans}
   - {type: trans}
   - Mouse Left
-  - Mouse Up
+  - Mouse Down
   - Mouse Right
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - Mouse Down
+  - {type: trans}
   - Scroll Down
   - {type: trans}
   - {type: trans}
   - Scroll Down
-  - Mouse Down
+  - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
