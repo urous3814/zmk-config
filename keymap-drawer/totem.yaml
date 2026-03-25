@@ -21,7 +21,7 @@ layers:
   - {t: K, h: Shift}
   - {t: L, h: Alt}
   - {t: '''', h: Ctrl}
-  - Esc
+  - LEFT SHIFT
   - Z
   - X
   - C
@@ -37,8 +37,8 @@ layers:
   - {t: Spc, h: NAV}
   - {t: Tab, h: SYS}
   - {t: Enter, h: SYM}
-  - {t: Bspc, h: NUM}
-  - F16
+  - {t: BACKSPACE, h: NUM}
+  - DELETE
   NUM:
   - '['
   - '7'
@@ -67,10 +67,10 @@ layers:
   - '3'
   - \
   - ''
-  - Ctrl
+  - RIGHT GUI
   - Shift
   - Alt
-  - Gui
+  - Ctrl
   - Shift
   - .
   - '0'
@@ -89,10 +89,10 @@ layers:
   - F8
   - F9
   - F12
-  - {t: ':', h: Gui}
+  - {t: ':', h: Ctrl}
   - {t: $, h: Alt}
   - {t: '%', h: Shift}
-  - {t: ^, h: Ctrl}
+  - {t: ^, h: LEFT GUI}
   - +
   - SLCK
   - F4
@@ -128,10 +128,10 @@ layers:
   - {t: Up, h: Doc Start}
   - {t: Del, h: Wrd Del}
   - PgUp
-  - Gui
+  - Ctrl
   - Alt
   - Shift
-  - Ctrl
+  - LEFT GUI
   - ''
   - CAPS
   - {t: Left, h: Home}
@@ -167,10 +167,10 @@ layers:
   - KP 8
   - KP 9
   - Reset Boot
-  - Gui
+  - Ctrl
   - Alt
   - Shift
-  - Ctrl
+  - LEFT GUI
   - ''
   - ''
   - KP 4
