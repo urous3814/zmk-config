@@ -199,10 +199,10 @@ layers:
   - {type: trans}
   - {type: trans}
   - Mouse Up
-  - Scroll Up
+  - Scroll Down
   - {type: trans}
   - {type: trans}
-  - Scroll Up
+  - Scroll Down
   - Mouse Up
   - {type: trans}
   - {type: trans}
@@ -220,10 +220,10 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - Scroll Down
+  - Scroll Up
   - {type: trans}
   - {type: trans}
-  - Scroll Down
+  - Scroll Up
   - {type: trans}
   - {type: trans}
   - {type: trans}
