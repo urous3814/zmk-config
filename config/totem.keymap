@@ -326,7 +326,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp STAR>;
             key-positions = <2 13>;
-            layers = <1>;
+            layers = <1 0>;
         };
 
         combo_slash {
@@ -366,7 +366,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp TAB>;
             key-positions = <1 2>;
-            layers = <1>;
+            layers = <1 0>;
         };
 
         combo_plus_n {

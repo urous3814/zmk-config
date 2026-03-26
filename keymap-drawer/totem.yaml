@@ -285,7 +285,7 @@ combos:
   l: [NUM]
 - p: [2, 13]
   k: '*'
-  l: [NUM]
+  l: [NUM, DEF]
   a: top
 - p: [12, 3]
   k: /
@@ -301,7 +301,7 @@ combos:
   l: [NUM]
 - p: [1, 2]
   k: Tab
-  l: [NUM]
+  l: [NUM, DEF]
 - p: [16, 17]
   k: KP+
   l: [SYS]
