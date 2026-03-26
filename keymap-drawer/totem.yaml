@@ -29,8 +29,8 @@ layers:
   - B
   - N
   - M
-  - {t: ',', h: Shift}
-  - {t: ., h: Alt}
+  - ','
+  - .
   - /
   - Shift
   - Esc
@@ -143,7 +143,7 @@ layers:
   - Cut
   - Copy
   - Paste
-  - Redo
+  - Gui+Y
   - Del
   - Prev
   - Next
@@ -196,36 +196,36 @@ layers:
   - KP 0
   - {type: trans}
   MOUSE:
-  - {type: trans}
-  - {type: trans}
+  - Copy
+  - Paste
   - Mouse Up
   - Scroll Down
   - {type: trans}
   - {type: trans}
   - Scroll Down
   - Mouse Up
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - Copy
+  - Paste
+  - Prev
   - Mouse Left
   - Mouse Down
   - Mouse Right
-  - {type: trans}
-  - {type: trans}
+  - Next
+  - Prev
   - Mouse Left
   - Mouse Down
   - Mouse Right
+  - Next
   - {type: trans}
   - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - Scroll Right
+  - Scroll Left
   - Scroll Up
   - {type: trans}
   - {type: trans}
   - Scroll Up
-  - {type: trans}
-  - {type: trans}
+  - Scroll Right
+  - Scroll Left
   - {type: trans}
   - {type: trans}
   - {type: trans}

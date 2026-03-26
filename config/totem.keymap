@@ -1,12 +1,12 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 8
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
@@ -456,9 +456,9 @@
         default_layer {
             display-name = "DEF";
             bindings = <
-                &kp Q         &kp W        &kp E        &kp R              &kp T            &kp Y      &kp U                &kp I            &kp O         &kp P
-                &aml LCTRL A  &aml LALT S  &asl LCMD D  &aml LEFT_SHIFT F  &kp G            &kp H      &amr RIGHT_SHIFT J   &asr LCMD K      &amr RALT L   &amr RCTRL SQT
-&kp LEFT_SHIFT  &kp Z         &kp X        &kp C        &kp V              &kp B            &kp N      &kp M                &mt RSHFT COMMA  &mt RALT DOT  &kp SLASH       &kp RSHFT
+                &kp Q         &kp W        &kp E        &kp R              &kp T            &kp Y      &kp U                &kp I          &kp O        &kp P
+                &aml LCTRL A  &aml LALT S  &asl LCMD D  &aml LEFT_SHIFT F  &kp G            &kp H      &amr RIGHT_SHIFT J   &asr LCMD K    &amr RALT L  &amr RCTRL SQT
+&kp LEFT_SHIFT  &kp Z         &kp X        &kp C        &kp V              &kp B            &kp N      &kp M                &kp COMMA      &kp DOT      &kp SLASH       &kp RSHFT
                                            &kp ESC      &nav_ht 0 SPACE    &sys_ht 0 TAB    &lt 2 RET  &num_ht 0 BACKSPACE  &mou_ht 5 F16
             >;
         };
@@ -488,7 +488,7 @@
             bindings = <
            &kp LS(TAB)  &sw_c      &kp LS(TAB)  &sw_a           &ht LA(F4) LC(F4)    &kp INS   &ht LC(BSPC) BSPC  &ht LC(HOME) UP   &ht LC(DEL) DEL  &kp PG_UP
            &kp LCTRL    &kp LALT   &kp LCMD     &kp LEFT_SHIFT  &none                &kp CAPS  &ht HOME LEFT      &ht LC(END) DOWN  &ht END RIGHT    &kp PG_DN
-&kp LSHFT  &kp LC(Z)    &kp LC(X)  &kp LC(C)    &kp LC(V)       &kp LC(Y)            &kp DEL   &kp C_PREV         &kp C_NEXT        &kp C_VOL_DN     &kp C_VOL_UP  &kp RSHFT
+&kp LSHFT  &kp LG(Z)    &kp LG(X)  &kp LG(C)    &kp LG(V)       &kp LG(Y)            &kp DEL   &kp C_PREV         &kp C_NEXT        &kp C_VOL_DN     &kp C_VOL_UP  &kp RSHFT
                                    &trans       &trans          &trans               &kp RET   &kp BSPC           &kp DEL
             >;
         };
@@ -505,10 +505,10 @@
 
         MOUSE {
             bindings = <
-        &trans  &trans          &mmv MOVE_UP          &msc SCRL_DOWN     &trans       &trans    &msc SCRL_DOWN    &mmv MOVE_UP          &trans           &trans
-        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT  &trans       &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT  &trans
-&trans  &trans  &trans          &trans  &msc SCRL_UP   &trans       &trans    &msc SCRL_UP  &trans   &trans           &trans  &trans
-                                &trans          &kp LCMD         &mkp LCLK    &mkp MB1  &mkp MB2        &trans
+        &kp LG(C)   &kp LG(V)        &mmv MOVE_UP    &msc SCRL_DOWN   &trans        &trans      &msc SCRL_DOWN  &mmv MOVE_UP     &kp LG(C)        &kp LG(V)
+        &kp C_PREV  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_NEXT    &kp C_PREV  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp C_NEXT
+&trans  &trans      &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP     &trans        &trans      &msc SCRL_UP    &msc SCRL_RIGHT  &msc SCRL_LEFT   &trans      &trans
+                                     &trans          &kp LCMD         &mkp LCLK     &mkp MB1    &mkp MB2        &trans
             >;
         };
     };
