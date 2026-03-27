@@ -11,6 +11,7 @@
         zmk,kscan = &mock_kscan;
         zmk,matrix_transform = &default_transform;
         zmk,physical-layout = &physical_layout0;
+        zmk,totem-telemetry-uart = &totem_telemetry_uart;
     };
 
     default_transform: keymap_transform_0 {
@@ -36,5 +37,11 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+};
+
+&zephyr_udc0 {
+    totem_telemetry_uart: totem_telemetry_uart {
+        compatible = "zephyr,cdc-acm-uart";
     };
 };

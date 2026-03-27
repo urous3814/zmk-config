@@ -15,4 +15,17 @@ config TOTEM_PROSPECTOR_BRIGHTNESS_MIN
     default 10
     range 0 100
 
+config TOTEM_TELEMETRY
+    bool "Enable Totem host telemetry"
+    default n
+    help
+      Streams live layer and battery snapshots from the dongle to the host over
+      a USB CDC ACM serial port.
+
+config TOTEM_TELEMETRY_INTERVAL_MS
+    int "Totem telemetry resend interval (ms)"
+    default 5000
+    range 250 60000
+    depends on TOTEM_TELEMETRY
+
 endmenu
