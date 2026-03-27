@@ -24,7 +24,16 @@ TOTEM is a 38 key column-staggered split keyboard running [ZMK](https://zmk.dev/
 - `git push` your repo to your fork
 - on the GitHub page of your fork navigate to "Actions"
 - scroll down and unzip the `firmware.zip` archive that contains the latest firmware
+- flash `settings_reset.uf2` to all three devices before switching to the dongle build
 - connect the left half of the TOTEM to your PC, press reset twice
 - the keyboard should now appear as a mass storage device
-- drag'n'drop the `totem_left-seeeduino_xiao_ble-zmk.uf2` file from the archive onto the storage device
-- repeat this process with the right half and the `totem_right-seeeduino_xiao_ble-zmk.uf2` file.
+- drag'n'drop the `totem_left.uf2` file from the archive onto the storage device
+- repeat this process with the right half and the `totem_right.uf2` file
+- flash `totem_dongle.uf2` to your Prospector dongle
+- pair the left half first and the right half second so the Prospector battery widgets stay in left-to-right order
+
+## PROSPECTOR
+
+- the build now includes `totem_dongle`, which uses `carrefinho/prospector-zmk-module` on the `feat/new-status-screens` branch
+- the dongle target builds with `totem_dongle prospector_adapter`
+- the Prospector status screen is pinned to the `classic` layout
