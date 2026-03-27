@@ -1,5 +1,10 @@
 menu "TOTEM Customization"
 
+config TOTEM_PROSPECTOR_BRIGHTNESS_DEFAULT
+    int "Prospector default brightness"
+    default 70
+    range 0 100
+
 config TOTEM_PROSPECTOR_BRIGHTNESS_STEP
     int "Prospector brightness step"
     default 10

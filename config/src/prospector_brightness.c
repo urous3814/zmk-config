@@ -18,7 +18,8 @@ struct prospector_brightness_state {
 };
 
 static struct prospector_brightness_state state = {
-    .brightness = MAX(CONFIG_PROSPECTOR_FIXED_BRIGHTNESS, CONFIG_TOTEM_PROSPECTOR_BRIGHTNESS_MIN),
+    .brightness =
+        MAX(CONFIG_TOTEM_PROSPECTOR_BRIGHTNESS_DEFAULT, CONFIG_TOTEM_PROSPECTOR_BRIGHTNESS_MIN),
 };
 
 #if (defined(CONFIG_SHIELD_PROSPECTOR_ADAPTER) ||                                             \

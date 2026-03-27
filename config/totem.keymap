@@ -180,6 +180,20 @@
             bindings = <&bootloader>, <&sys_reset>;
         };
 
+        prbu: pros_bri_up {
+            compatible = "zmk,behavior-prospector-brightness";
+            #binding-cells = <0>;
+            display-name = "Prospector Brightness Up";
+            direction = <1>;
+        };
+
+        prbd: pros_bri_dn {
+            compatible = "zmk,behavior-prospector-brightness";
+            #binding-cells = <0>;
+            display-name = "Prospector Brightness Down";
+            direction = <-1>;
+        };
+
         mou_ht: mouse_layer_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
