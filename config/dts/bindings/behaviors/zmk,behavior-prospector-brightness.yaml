@@ -1,0 +1,10 @@
+description: Prospector brightness behavior
+
+compatible: "zmk,behavior-prospector-brightness"
+
+include: zero_param.yaml
+
+properties:
+  direction:
+    type: int
+    required: true

@@ -158,8 +158,8 @@ layers:
   - Del
   SYS:
   - Reset Boot
-  - ''
-  - ''
+  - '&prbd'
+  - '&prbu'
   - Lock
   - Bat Save
   - Bat Save

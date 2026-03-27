@@ -35,5 +35,6 @@ TOTEM is a 38 key column-staggered split keyboard running [ZMK](https://zmk.dev/
 ## PROSPECTOR
 
 - the build now includes `totem_dongle`, which uses `carrefinho/prospector-zmk-module` on the `feat/new-status-screens` branch
-- the dongle target builds with `totem_dongle prospector_adapter`
+- the dongle target builds with `totem_dongle prospector_adapter_battery`
 - the Prospector status screen is pinned to the `classic` layout
+- the classic battery bar is split into left / dongle / right slots

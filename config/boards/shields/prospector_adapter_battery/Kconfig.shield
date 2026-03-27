@@ -1,0 +1,2 @@
+config SHIELD_PROSPECTOR_ADAPTER_BATTERY
+    def_bool $(shields_list_contains,prospector_adapter_battery)
