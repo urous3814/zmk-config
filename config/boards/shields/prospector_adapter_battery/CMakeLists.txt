@@ -12,6 +12,17 @@ if(CONFIG_SHIELD_PROSPECTOR_ADAPTER_BATTERY)
   zephyr_library_sources(src/brightness.c)
   zephyr_library_sources(src/custom_status_screen.c)
   zephyr_library_sources(src/display_rotate_init.c)
+  zephyr_library_sources(src/events/split_central_status_changed.c)
+  zephyr_library_sources(src/split/bluetooth/central_status_changed_observer.c)
+
+  if(CONFIG_DT_HAS_ZMK_BEHAVIOR_CAPS_WORD_ENABLED)
+    zephyr_library_sources(src/events/caps_word_state_changed.c)
+    set_source_files_properties(
+      ${APPLICATION_SOURCE_DIR}/src/behaviors/behavior_caps_word.c
+      TARGET_DIRECTORY app
+      PROPERTIES HEADER_FILE_ONLY ON)
+    target_sources(app PRIVATE ${CMAKE_CURRENT_LIST_DIR}/src/behaviors/behavior_caps_word.c)
+  endif()
 
   if(CONFIG_PROSPECTOR_SHOW_MODIFIERS)
     zephyr_library_sources(src/modifier_order.c)
