@@ -115,4 +115,4 @@ static int zmk_prospector_brightness_init(void) {
     return apply_brightness(state.brightness);
 }
 
-SYS_INIT(zmk_prospector_brightness_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY + 1);
+SYS_INIT(zmk_prospector_brightness_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);

@@ -191,7 +191,7 @@
             compatible = "zmk,behavior-prospector-brightness";
             #binding-cells = <0>;
             display-name = "Prospector Brightness Down";
-            direction = <-1>;
+            direction = <(-1)>;
         };
 
         mou_ht: mouse_layer_hold_tap {
