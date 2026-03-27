@@ -521,7 +521,7 @@
             display-name = "MOUSE";
             bindings = <
         &kp LG(C)   &kp LG(V)        &mmv MOVE_UP    &msc SCRL_DOWN   &trans        &trans      &msc SCRL_DOWN  &mmv MOVE_UP     &kp LG(C)        &kp LG(V)
-        &kp C_PREV  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_NEXT    &kp C_PREV  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp C_NEXT
+        &kp C_AC_BACK  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_AC_FORWARD    &kp C_AC_BACK  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp C_AC_FORWARD
 &trans  &trans      &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP     &trans        &trans      &msc SCRL_UP    &msc SCRL_RIGHT  &msc SCRL_LEFT   &trans      &trans
                                      &trans          &kp LCMD         &mkp LCLK     &mkp MB1    &mkp MB2        &trans
             >;

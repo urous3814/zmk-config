@@ -206,16 +206,16 @@ layers:
   - Mouse Up
   - Copy
   - Paste
-  - Prev
+  - AC BACK
   - Mouse Left
   - Mouse Down
   - Mouse Right
-  - Next
-  - Prev
+  - AC FORWARD
+  - AC BACK
   - Mouse Left
   - Mouse Down
   - Mouse Right
-  - Next
+  - AC FORWARD
   - {type: trans}
   - {type: trans}
   - Scroll Right
