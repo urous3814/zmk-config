@@ -2,15 +2,23 @@
 include:
     - board: xiao_ble//zmk
       shield: totem_left
-      artifact-name: totem_left
+      artifact-name: totem_left_dongle
       cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     - board: xiao_ble//zmk
       shield: totem_right
-      artifact-name: totem_right
+      artifact-name: totem_right_dongle
       cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     - board: xiao_ble//zmk
       shield: totem_dongle prospector_adapter_battery
       artifact-name: totem_dongle
+    - board: xiao_ble//zmk
+      shield: totem_left
+      artifact-name: totem_left_direct
+      cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    - board: xiao_ble//zmk
+      shield: totem_right
+      artifact-name: totem_right_direct
+      cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     - board: xiao_ble//zmk
       shield: settings_reset
       artifact-name: settings_reset
