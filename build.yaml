@@ -14,11 +14,27 @@ include:
     - board: xiao_ble//zmk
       shield: totem_left
       artifact-name: totem_left_direct
-      cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+      cmake-args: >-
+        -DCONFIG_ZMK_SPLIT=y
+        -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+        -DCONFIG_ZMK_SLEEP=n
+        -DCONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
+        -DCONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+        -DCONFIG_BT_PERIPHERAL_PREF_MIN_INT=6
+        -DCONFIG_BT_PERIPHERAL_PREF_MAX_INT=6
+        -DCONFIG_BT_PERIPHERAL_PREF_LATENCY=0
     - board: xiao_ble//zmk
       shield: totem_right
       artifact-name: totem_right_direct
-      cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+      cmake-args: >-
+        -DCONFIG_ZMK_SPLIT=y
+        -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+        -DCONFIG_ZMK_SLEEP=n
+        -DCONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
+        -DCONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+        -DCONFIG_BT_PERIPHERAL_PREF_MIN_INT=6
+        -DCONFIG_BT_PERIPHERAL_PREF_MAX_INT=6
+        -DCONFIG_BT_PERIPHERAL_PREF_LATENCY=0
     - board: xiao_ble//zmk
       shield: settings_reset
       artifact-name: settings_reset
