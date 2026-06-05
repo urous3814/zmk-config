@@ -33,12 +33,12 @@ layers:
   - .
   - /
   - Shift
-  - Esc
+  - {t: Esc, h: LCMD}
   - {t: Spc, h: NAVI}
   - {t: Tab, h: SYSTEM}
   - {t: Enter, h: SYMBOL}
   - {t: BACKSPACE, h: NUMBER}
-  - {t: F16, h: MOUSE}
+  - RCMD
   NUMBER:
   - '['
   - '7'
@@ -126,7 +126,7 @@ layers:
   - Ins
   - {t: Bspc, h: Wrd Bspc}
   - {t: Up, h: Doc Start}
-  - {t: Del, h: Wrd Del}
+  - {t: Ctl+D, h: Wrd Del}
   - PgUp
   - Ctrl
   - Alt

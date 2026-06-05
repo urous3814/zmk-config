@@ -24,7 +24,7 @@
 
 &mmv {
     acceleration-exponent = <1>;
-    time-to-max-speed-ms = <650>;
+    time-to-max-speed-ms = <1000>;
     trigger-period-ms = <6>;
 };
 
@@ -473,7 +473,7 @@
                 &kp Q         &kp W        &kp E        &kp R              &kp T            &kp Y      &kp U                &kp I          &kp O        &kp P
                 &aml LCTRL A  &aml LALT S  &asl LCMD D  &aml LEFT_SHIFT F  &kp G            &kp H      &amr RIGHT_SHIFT J   &asr LCMD K    &amr RALT L  &amr RCTRL SQT
 &kp LEFT_SHIFT  &kp Z         &kp X        &kp C        &kp V              &kp B            &kp N      &kp M                &kp COMMA      &kp DOT      &kp SLASH       &kp RSHFT
-                                           &kp ESC      &nav_ht 0 SPACE    &sys_ht 0 TAB    &lt 2 RET  &num_ht 0 BACKSPACE  &mou_ht 5 F16
+                                           &ht LCMD ESC &nav_ht 0 SPACE    &sys_ht 0 TAB    &lt 2 RET  &num_ht 0 BACKSPACE  &kp RCMD
             >;
         };
 
@@ -500,8 +500,8 @@
         navigation_layer {
             display-name = "NAVI";
             bindings = <
-           &kp LS(TAB)  &sw_c      &kp LS(TAB)  &sw_a           &ht LA(F4) LC(F4)    &kp INS   &ht LC(BSPC) BSPC  &ht LC(HOME) UP   &ht LC(DEL) DEL  &kp PG_UP
-           &kp LCTRL    &kp LALT   &kp LCMD     &kp LEFT_SHIFT  &none                &kp CAPS  &ht HOME LEFT      &ht LC(END) DOWN  &ht END RIGHT    &kp PG_DN
+           &kp LS(TAB)  &sw_c      &kp LS(TAB)  &sw_g           &ht LG(Q) LG(W)      &kp INS   &ht LA(BSPC) BSPC  &ht LG(UP) UP     &ht LA(DEL) LC(D)  &kp PG_UP
+           &kp LCTRL    &kp LALT   &kp LCMD     &kp LEFT_SHIFT  &none                &kp CAPS  &ht LG(LEFT) LEFT  &ht LG(DOWN) DOWN &ht LG(RIGHT) RIGHT &kp PG_DN
 &kp LSHFT  &kp LG(Z)    &kp LG(X)  &kp LG(C)    &kp LG(V)       &kp LG(Y)            &kp DEL   &kp C_PREV         &kp C_NEXT        &kp C_VOL_DN     &kp C_VOL_UP  &kp RSHFT
                                    &trans       &trans          &trans               &kp RET   &kp BSPC           &kp DEL
             >;

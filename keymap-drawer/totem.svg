@@ -279,6 +279,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(255, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Esc</text>
+<text x="0" y="24" class="key hold">LCMD</text>
 </g>
 <g transform="translate(320, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -306,10 +307,8 @@ path.combo { stroke: #7f7f7f; }
 </a></g>
 <g transform="translate(596, 236)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">F16</text>
-<a href="#MOUSE">
-<text x="0" y="24" class="key hold layer-activator">MOUSE</text>
-</a></g>
+<text x="0" y="0" class="key tap">RCMD</text>
+</g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="97" y="74" width="28" height="26" class="combo"/>
 <text x="111" y="87" class="combo tap">Esc</text>
@@ -795,7 +794,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(706, 62) rotate(4.0)" class="key keypos-8">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">Del</text>
+<text x="0" y="0" class="key tap">Ctl+D</text>
 <text x="0" y="24" class="key hold">Wrd Del</text>
 </g>
 <g transform="translate(773, 113) rotate(10.0)" class="key keypos-9">
