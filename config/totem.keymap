@@ -500,7 +500,7 @@
         navigation_layer {
             display-name = "NAVI";
             bindings = <
-           &kp LS(TAB)  &sw_c      &kp LS(TAB)  &sw_g           &ht LG(Q) LG(W)      &kp INS   &ht LA(BSPC) BSPC  &ht LG(UP) UP     &ht LA(DEL) LC(D)  &kp PG_UP
+           &kp LS(TAB)  &sw_c      &kp LC(GRAVE) &sw_g           &ht LG(Q) LG(W)      &kp INS   &ht LA(BSPC) BSPC  &ht LG(UP) UP     &ht LA(DEL) LC(D)  &kp PG_UP
            &kp LCTRL    &kp LALT   &kp LCMD     &kp LEFT_SHIFT  &none                &kp CAPS  &ht LG(LEFT) LEFT  &ht LG(DOWN) DOWN &ht LG(RIGHT) RIGHT &kp PG_DN
 &kp LSHFT  &kp LG(Z)    &kp LG(X)  &kp LG(C)    &kp LG(V)       &kp LG(Y)            &kp DEL   &kp C_PREV         &kp C_NEXT        &kp C_VOL_DN     &kp C_VOL_UP  &kp RSHFT
                                    &trans       &trans          &trans               &kp RET   &kp BSPC           &kp DEL

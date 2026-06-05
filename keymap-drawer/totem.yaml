@@ -120,7 +120,7 @@ layers:
   NAVI:
   - Shift Tab
   - Tab Next
-  - Shift Tab
+  - Ctl+`
   - Win Next
   - {t: Tab Close, h: Win Close}
   - Ins

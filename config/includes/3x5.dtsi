@@ -53,7 +53,7 @@
         navigation_layer {
             display-name = "NAV";
             bindings = <LAYER_FROM38(
-                &kp LS(TAB),      &T_RHT,           &kp LS(TAB),       &W_RHT,            &ht W_CLS T_CLS,  &kp INS,               &ht WD_BSPC CH_BSPC, &ht ST_DOC UP,      &ht WD_DEL CH_DEL,  &kp PG_UP,
+                &kp LS(TAB),      &T_RHT,           &kp LC(GRAVE),     &W_RHT,            &ht W_CLS T_CLS,  &kp INS,               &ht WD_BSPC CH_BSPC, &ht ST_DOC UP,      &ht WD_DEL CH_DEL,  &kp PG_UP,
                 &kp M_PNK,        &kp M_RNG,        &kp M_MDL,         &kp M_IDX,         &none,            &kp CAPS,              &ht LN_STR LEFT,    &ht EN_DOC DOWN,    &ht LN_END RIGHT,   &kp PG_DN,
                 &kp L_EXP,        &kp C_UND,        &kp C_CUT,         &kp C_CPY,         &kp C_PST,        &kp C_RDO,             &kp DEL,            &kp C_PREV,         &kp C_NEXT,         &kp C_VOL_DN,       &kp C_VOL_UP,       &kp R_EXP,
                                                      &trans,           &trans,            &trans,          &kp RET,               &kp BSPC,           &kp DEL
